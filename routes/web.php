@@ -18,7 +18,7 @@ $router->get('/', function () use ($router) {
 });
 
 // Création du groupr api : http://localhost:8000/api/
-$router->group(['prefix' => 'api'], function () use ($router) {
+$router->group(['prefix' => 'rapnoteapi'], function () use ($router) {
     $router->get('notes', ['uses' => 'NoteController@getAllNotes']);
     $router->get('notes/{id}', ['uses' => 'NoteController@getOneNote']);
 
